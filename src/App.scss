@@ -1,0 +1,24 @@
+body {
+  background: #c9c7bb;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+.game {
+  text-align: center;
+  display: block;
+  max-width: 600px;
+  padding: 0px 10px 0px 0px;
+  &__max-click {
+    font-family: "Visitor TT1 BRK";
+    font-size: 23px;
+    margin: 50px 0 0 0;
+  }
+}
+.clicker-content {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}

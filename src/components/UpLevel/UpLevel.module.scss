@@ -1,0 +1,29 @@
+.level{
+  cursor: pointer;
+  font-family:Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  width: 260px;
+  border: 3px solid #222;
+  background: #b9a890;
+  font-weight: 600;
+  padding: 15px;
+  margin: 13px;
+  .level_img{
+    pointer-events: none;
+    margin: 0px 10px 0px 0px;
+  }
+}
+.tooltip {
+  position: absolute;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #333;
+  color: #fff;
+  padding: 8px;
+  width: 240px;
+  text-align: center;
+  margin: -10px 0px 0px -270px;
+  font-size: 24px;
+  border-radius: 4px;
+  pointer-events: none;
+}

@@ -1,0 +1,71 @@
+.button {
+  background: none;
+  border-radius: 50%;
+  border: none;
+  padding: -20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  &:active {
+
+    transform: scale(0.95);
+  }
+  &:focus {
+    background-color: transparent;
+    outline: none;
+}
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.img {
+  pointer-events: none;
+  width: 250px;
+  animation-name: rotate;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; 
+  animation-direction: alternate;
+}
+
+
+
+
+@keyframes showZurochky {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-100px);
+  }
+}
+
+/* Стилізація зурочок */
+.zurochka {
+  position: absolute;
+  user-select: none;
+  cursor: pointer;
+  font-family: "Visitor TT1 BRK";
+  padding: 5px;
+  text-shadow: 
+    white -2px -2px 0, 
+    white 2px -2px 0, 
+    white -2px 2px 0,
+    white 2px 2px 0, 
+    black 6px 5px 10px;
+
+
+  font-size: 25px;
+  // background-color: #ffcc00;
+  // border-radius: 50%;
+  animation: showZurochky 1s ease;
+}
