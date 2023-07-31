@@ -8,13 +8,19 @@ function App() {
   const [maxClick, setMaxClick] = useState(1000) // clicks left
   const [clickToLevelUp, setClickToLevelUp] = useState(5)// left clicks to buy
   const [cookie, setCookie] = useState(0) // cookies received
-  console.log(clickToLevelUp)
-  console.log(maxClick)
-
   const [clicker, setClicker] = useState(1)
+  const [priceToUpLevelForClick, setPriceToUpLevelForClick] = useState(10)
 
-console.log(clicker)
 
+  const [coutnForUpLeavel, setCoutnForUpLeavel] = useState(0)
+
+  const upLevelItems = [
+    {id: 1, value: "", image: " ", price: " ", fn: "" },
+    {id: 2, value: " ", image: " ", price: " ", fn: "" },
+    {id: 3, value: " ", image: " ", price: " ", fn: "" },
+    {id: 4, value: " ", image: " ", price: " ", fn: "" },
+    {id: 5, value: " ", image: " ", price: " ", fn: "" },
+  ]
 
  const formatNumber = (num : number):string => {
     if (num >= 1000000 ) {
@@ -26,8 +32,6 @@ console.log(clicker)
     }
   }
 
-  const [priceToUpLevelForClick, setPriceToUpLevelForClick] = useState(200)
-
   return (
     <div className="wrapper">
       <div className='game'>
@@ -35,13 +39,12 @@ console.log(clicker)
         <div className='clicker-content'>
           <Button clicker={clicker} cookie={cookie} setCookie={setCookie} maxClick={maxClick} setMaxClick={setMaxClick} clickToLevelUp={clickToLevelUp} setClickToLevelUp={setClickToLevelUp}/>
         </div>
-        <p className="game__max-click"><img width={40} src={cookieIcon} alt="" /> :  {formatNumber(cookie)}</p>
-        <p className="game__max-click">clicks to raise the level: {clickToLevelUp}</p>
+        <p className="game__max-click"><img width={40} src={cookieIcon} alt="" />{formatNumber(cookie)}</p>
+        <p className="game__max-click">clicks till reroll: {clickToLevelUp}</p>
       </div>
       <div className="levels">
-        <UpLevel setClicker={setClicker} setClickToLevelUp={setClickToLevelUp} clickToLevelUp={clickToLevelUp} price={priceToUpLevelForClick} setPriceToUpLevelForClick={setPriceToUpLevelForClick} cookie={cookie} setCookie={setCookie}/>
-        <UpLevel setClicker={setClicker} setClickToLevelUp={setClickToLevelUp} clickToLevelUp={clickToLevelUp} price={priceToUpLevelForClick} setPriceToUpLevelForClick={setPriceToUpLevelForClick} cookie={cookie} setCookie={setCookie}/>
-        <UpLevel setClicker={setClicker} setClickToLevelUp={setClickToLevelUp} clickToLevelUp={clickToLevelUp} price={priceToUpLevelForClick} setPriceToUpLevelForClick={setPriceToUpLevelForClick} cookie={cookie} setCookie={setCookie}/>
+        <h2>Store</h2>
+        <UpLevel setCoutnForUpLeavel={setCoutnForUpLeavel} coutnForUpLeavel={coutnForUpLeavel} setClicker={setClicker} setClickToLevelUp={setClickToLevelUp} clickToLevelUp={clickToLevelUp} price={priceToUpLevelForClick} setPriceToUpLevelForClick={setPriceToUpLevelForClick} cookie={cookie} setCookie={setCookie}/>
       </div>
     </div>
   );

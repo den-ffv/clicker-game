@@ -3,9 +3,11 @@
   font-family:Arial, Helvetica, sans-serif;
   display: flex;
   align-items: center;
-  width: 260px;
-  border: 3px solid #222;
-  background: #b9a890;
+  justify-content: space-between;
+  width: 150px;
+  border: 2px solid #555555;
+  box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.65);
+  background: #aaa79ebe;
   font-weight: 600;
   padding: 15px;
   margin: 13px;

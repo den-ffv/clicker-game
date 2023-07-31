@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import btnStyle from "./Button.module.scss";
 import cookieImage from "/cookie.png";
 
@@ -21,39 +21,36 @@ const Button: React.FC<TypeButtonProps> = ({
   clickToLevelUp,
   setClickToLevelUp,
 }) => {
-  const handleClick = (e: any) => {
+  const clickCookie = new Audio("/clickCookie.mp3");
+
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (clickToLevelUp > 0) {
       setClickToLevelUp(clickToLevelUp - 1);
     }
     if (maxClick > 0) {
       setMaxClick(maxClick - 1);
       setCookie(cookie + clicker);
-      e.preventDefault()
+      e.preventDefault();
       const stars = document.createElement("div");
       stars.textContent = `+${clicker}`;
       stars.classList.add(`${btnStyle.zurochka}`);
-      const randomX = e.clientX + Math.floor(Math.random() * 30) - 15;
-      const randomY = e.clientY + Math.floor(Math.random() * 30) - 15;
-      stars.style.left = `${randomX}px`;
-      stars.style.top = `${randomY}px`;
+      stars.style.left = `${e.clientX}px`;
+      stars.style.top = `${e.clientY}px`;
 
       document.body.appendChild(stars);
 
       stars.addEventListener("animationend", () => {
         stars.remove();
       });
-    }
-  };
 
-  const handleKeyPress = (e: React.KeyboardEvent<HTMLButtonElement>) => {
-    if ( e.code == "Space") {
-      handleClick(e);
+      clickCookie.volume = 0.1;
+      clickCookie.play();
     }
   };
 
   return (
     <>
-      <button  onKeyDown={handleKeyPress} type='button' onClick={handleClick} className={btnStyle.button}>
+      <button type='button' onClick={handleClick} className={btnStyle.button}>
         <img className={btnStyle.img} src={cookieImage} />
       </button>
     </>

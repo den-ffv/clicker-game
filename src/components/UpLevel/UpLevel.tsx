@@ -10,6 +10,8 @@ type TypeUpLevel = {
   setPriceToUpLevelForClick: React.Dispatch<React.SetStateAction<number>>;
   clickToLevelUp: number;
   setClickToLevelUp: React.Dispatch<React.SetStateAction<number>>;
+  coutnForUpLeavel: number,
+  setCoutnForUpLeavel: React.Dispatch<React.SetStateAction<number>>
 };
 const UpLevel: React.FC<TypeUpLevel> = ({
   setPriceToUpLevelForClick,
@@ -19,16 +21,23 @@ const UpLevel: React.FC<TypeUpLevel> = ({
   price,
   cookie,
   setCookie,
+  setCoutnForUpLeavel,
+  coutnForUpLeavel
 }) => {
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
+  const clickSound = new Audio("/click1.mp3");
+
+
   const handleClickLevelConponent = () => {
     if (cookie >= price && clickToLevelUp === 0) {
+      clickSound.play();
       setCookie(cookie - price);
       setPriceToUpLevelForClick((prev) => prev * 2);
       setClicker((prev) => prev + 2);
       setClickToLevelUp(5);
+      setCoutnForUpLeavel(prev => prev + 1)
       console.log(123123);
     }
   };
@@ -55,7 +64,7 @@ const UpLevel: React.FC<TypeUpLevel> = ({
         className={styleUpLevel.level}
       >
         <img className={styleUpLevel.level_img} src={icon} width={30} alt='' />
-        <p>cookie click {price}</p>
+        <p>{coutnForUpLeavel === 0 ? "" : coutnForUpLeavel}</p>
       </div>
       {isTooltipVisible && (
         <div
@@ -66,6 +75,7 @@ const UpLevel: React.FC<TypeUpLevel> = ({
           }}
         >
           + 1
+          <p>cookie click {price}</p>
         </div>
       )}
     </>

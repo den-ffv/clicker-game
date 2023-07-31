@@ -2,12 +2,16 @@
   background: none;
   border-radius: 50%;
   border: none;
-  padding: -20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
   position: relative;
+  
+  &:hover{
+  transition: 0.3s ease;
+    transform: scale(1.06);
+  }
   &:active {
-
+  transition: 0.3s ease;
     transform: scale(0.95);
   }
   &:focus {
@@ -16,26 +20,26 @@
 }
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(180deg);
-  }
-}
+// @keyframes rotate {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(40deg);
+//   }
+// }
 
 .img {
+  filter: drop-shadow(0px 0px 50px #ffffffd4);
+  margin: 50px 0px 50px 0px;
   pointer-events: none;
-  width: 250px;
+  width: 200px;
   animation-name: rotate;
-  animation-duration: 10s;
+  animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite; 
   animation-direction: alternate;
 }
-
-
 
 
 @keyframes showZurochky {
@@ -45,16 +49,17 @@
   }
   100% {
     opacity: 1;
-    transform: translateY(-100px);
+    transform: translateY(-150px);
   }
 }
 
-/* Стилізація зурочок */
 .zurochka {
   position: absolute;
   user-select: none;
+  color: #222;
   cursor: pointer;
   font-family: "Visitor TT1 BRK";
+  margin: 0px 0px 10px 10px;
   padding: 5px;
   text-shadow: 
     white -2px -2px 0, 
@@ -62,10 +67,6 @@
     white -2px 2px 0,
     white 2px 2px 0, 
     black 6px 5px 10px;
-
-
   font-size: 25px;
-  // background-color: #ffcc00;
-  // border-radius: 50%;
   animation: showZurochky 1s ease;
 }

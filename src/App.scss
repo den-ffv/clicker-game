@@ -1,5 +1,12 @@
 body {
-  background: #c9c7bb;
+  background: linear-gradient(114deg, #285e81 30%, #298dc5 80%);
+  color: #fdfff5;
+  height: 100vh;
+  font-family: "Visitor TT1 BRK";
+  font-size: 23px;
+  text-shadow: rgb(0, 0, 0) -2px -2px 0, rgb(0, 0, 0) 2px -2px 0,
+    rgb(0, 0, 0) -2px 2px 0, rgb(0, 0, 0) 2px 2px 0,
+    rgb(255, 255, 255) 0px 0px 0px;
 }
 .wrapper {
   display: flex;
@@ -10,11 +17,17 @@ body {
   text-align: center;
   display: block;
   max-width: 600px;
+  margin: 0 auto;
   padding: 0px 10px 0px 0px;
   &__max-click {
-    font-family: "Visitor TT1 BRK";
     font-size: 23px;
     margin: 50px 0 0 0;
+    text-shadow: rgb(0, 0, 0) -2px -2px 0, rgb(0, 0, 0) 2px -2px 0,
+      rgb(0, 0, 0) -2px 2px 0, rgb(0, 0, 0) 2px 2px 0,
+      rgb(255, 255, 255) 0px 0px 0px;
+    img {
+      margin: 0px 0px -15px 0px;
+    }
   }
 }
 .clicker-content {
