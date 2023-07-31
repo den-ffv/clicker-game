@@ -14,13 +14,13 @@ function App() {
 
   const [coutnForUpLeavel, setCoutnForUpLeavel] = useState(0)
 
-  const upLevelItems = [
-    {id: 1, value: "", image: " ", price: " ", fn: "" },
-    {id: 2, value: " ", image: " ", price: " ", fn: "" },
-    {id: 3, value: " ", image: " ", price: " ", fn: "" },
-    {id: 4, value: " ", image: " ", price: " ", fn: "" },
-    {id: 5, value: " ", image: " ", price: " ", fn: "" },
-  ]
+  // const upLevelItems = [
+  //   {id: 1, value: "", image: " ", price: " ", fn: "" },
+  //   {id: 2, value: " ", image: " ", price: " ", fn: "" },
+  //   {id: 3, value: " ", image: " ", price: " ", fn: "" },
+  //   {id: 4, value: " ", image: " ", price: " ", fn: "" },
+  //   {id: 5, value: " ", image: " ", price: " ", fn: "" },
+  // ]
 
  const formatNumber = (num : number):string => {
     if (num >= 1000000 ) {
