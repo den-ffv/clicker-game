@@ -1,19 +1,33 @@
 .level{
   cursor: pointer;
   font-family:Arial, Helvetica, sans-serif;
-  display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 150px;
+  width: 200px;
+  min-height: 80px;
   border: 2px solid #555555;
-  box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.65);
-  background: #aaa79ebe;
+  box-shadow: 0px 0px 17px -3px rgba(36, 36, 36, 0.65);
+  background: linear-gradient(109deg,#cdcac5 20%, #8d8d8d 80%);
   font-weight: 600;
-  padding: 15px;
-  margin: 13px;
+  padding: 5px 10px;
+  margin: 13px 10px;
+  .level_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .level_img{
+    width: 50px;
     pointer-events: none;
     margin: 0px 10px 0px 0px;
+  }
+  .level_coutn{
+    color : #dddddda7;
+    text-shadow: none;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 55px;
   }
 }
 .tooltip {
@@ -22,10 +36,65 @@
   background-color: #333;
   color: #fff;
   padding: 8px;
-  width: 240px;
+  width: 200px;
   text-align: center;
-  margin: -10px 0px 0px -270px;
+  margin: -10px 0px 0px -240px;
   font-size: 24px;
   border-radius: 4px;
   pointer-events: none;
+  .tooltip_content{
+    // display: flex;
+
+  }
+  .tooltip_img{
+    width: 30px;
+    // margin: 0px 0px 0px 30px;
+  }
+  .tooltip_price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+.mobile{
+  display: none;
+}
+
+
+  @media (max-width: 1023px) {
+    .level{
+      width: 250px;
+    }
+    .tooltip {
+      display: none;
+    }
+    .mobile {
+      display: block;
+      color: #fff;
+      padding: 8px;
+      text-align: center;
+  
+      font-size: 24px;
+      border-radius: 4px;
+      pointer-events: none;
+    }
+    .mobile_content{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .mobile_img{
+      width: 30px;
+    }
+    .mobile_name{
+      display: flex;
+      justify-content: space-around;
+    }
+    .mobile_price{
+      margin: 10px 0px 0px 0px;
+      display: flex;
+      justify-content: center;
+    }
 }

@@ -30,8 +30,27 @@ body {
     }
   }
 }
-.clicker-content {
-  display: grid;
-  justify-content: center;
-  align-content: center;
+
+.clicker-content {}
+
+.levels {
+  border: 4px solid #e1e1e1;
+  padding: 10px 20px;
+  background: rgb(1, 145, 145);
+}
+.levels-content{
+}
+
+@media(max-width: 1023px){
+  .wrapper{
+    flex-direction: column;
+  }
+  .levels{
+    margin: 20px 0px 0px 0px;
+  }
+  .levels-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

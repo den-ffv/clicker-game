@@ -43,7 +43,7 @@ const Button: React.FC<TypeButtonProps> = ({
         stars.remove();
       });
 
-      clickCookie.volume = 0.1;
+      clickCookie.volume = 0.05;
       clickCookie.play();
     }
   };
