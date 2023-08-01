@@ -9,7 +9,6 @@ function App() {
   const [clickToLevelUp, setClickToLevelUp] = useState(5); // left clicks to buy
   const [cookie, setCookie] = useState(1000); // cookies received
   const [clicker, setClicker] = useState(1);
-  const [priceToUpLevelForClick, setPriceToUpLevelForClick] = useState(10);
 
 
   const [priceToUpLevelOne, setPriceToUpLevelOne] = useState<number>(100);

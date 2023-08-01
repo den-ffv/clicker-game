@@ -34,8 +34,6 @@ const UpLevel: React.FC<TypeUpLevel> = ({
 
   const clickSound = new Audio("/click1.mp3");
 
-  const isMobile = window.innerWidth <= 1023;
-
   const handleClickLevelConponent = () => {
     if (cookie >= priceToLevelUp && clickToLevelUp === 0) {
       setCookie(cookie - priceToLevelUp);
