@@ -1,0 +1,42 @@
+.status-bar {
+  width: 100vw;
+  height: 25px;
+  background: #c9c9c9;
+  position: fixed;
+  display: flex;
+  align-content: center;
+  justify-content: end;
+  left: 0;
+  bottom: 0;
+  z-index: 90;
+  &__connection {
+    display: flex;
+    align-items: center;
+    span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgb(2, 177, 2);
+      animation: blinking 1.5s ease-in-out  infinite;
+    }
+    p {
+      cursor: default;
+      font-size: 13px;
+      margin: 0px 50px 0px 10px;
+      color: #000;
+    }
+  }
+}
+@keyframes blinking  {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
+  }
+}

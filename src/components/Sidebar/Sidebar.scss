@@ -1,0 +1,41 @@
+.sidebar{
+    position: fixed;
+    text-align: center;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 80px;
+    background: #0E1014;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    z-index: 100;
+    &__logo{
+        margin: 0px 0px 40px 0px;
+    }
+
+    &__button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0px 10px 0px;
+        width: 42px;
+        margin: 15px 0px;
+        border-radius: 8px;
+        background: #23252B;
+        border: 1px solid transparent;
+        transition: 0.5s;
+        &:hover{
+            transition: 0.5s;
+            border: 1px solid silver;
+        }
+    }
+    &__user-button{
+        display: flex;
+        padding: 8px 10px;
+        border-radius: 50%;
+        justify-content: center;
+    }
+}

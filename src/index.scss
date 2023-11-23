@@ -1,5 +1,27 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  // overflow: hidden;
+  color: #333;
+  height: 100vh;
+  font-family: "silka_monoregular";
+  font-size: 23px;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+.margen-content {
+  margin-left: 90px;
+}
+
+.logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
 }
